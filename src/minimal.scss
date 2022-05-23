@@ -1,6 +1,10 @@
 @import '~normalize.css';
 @import './variables';
 
+* {
+    box-sizing: border-box;
+}
+
 html {
     font-family: var(--font-family);
     scroll-behavior: smooth;
@@ -182,4 +186,23 @@ section {
 
 footer {
     grid-column: 1/-1;
+}
+
+input:not([type='checkbox']):not([type='radio']),
+select:not([multiple]) {
+    width: 100%;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    padding: calc(var(--spacing) * 0.5) var(--spacing);
+    background-color: var(--bg-color);
+    margin-bottom: var(--spacing);
+    color: var(--font-color);
+    line-height: 1.5;
+    appearance: none;
+}
+
+select {
+    background-image: var(--chevron);
+    background-repeat: no-repeat;
+    background-position: right calc(var(--spacing) * 0.5) center;
 }
