@@ -2,6 +2,7 @@
 //box-shadow examples: https://getcssscan.com/css-box-shadow-examples
 
 :root {
+    //colors
     --black: #000000;
     --white: #ffffff;
     --gray-100: #f8f9fa;
@@ -18,12 +19,17 @@
     --section-bg-color: var(--white);
     --font-color: var(--gray-900);
     --border-color: var(--gray-500);
-    --hover-color: var(--gray-100);
+    --hover-color: var(--gray-400);
     --table-alt-color: var(--gray-200);
+    --button-bg-color: var(--gray-200);
+    --button-hover-color: var(--gray-300);
+    //fonts
     --font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
         'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
         'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    //spacing for padding and margin
     --spacing: 1rem;
+    //font sizes
     --base: 16;
     --html-font-size: calc((var(--base) / 16) * 100%);
     --font-8: calc((8 / var(--base) * 1rem));
@@ -33,12 +39,14 @@
     --font-40: calc((40 / var(--base) * 1rem));
     --font-48: calc((48 / var(--base) * 1rem));
     --font-64: calc((64 / var(--base) * 1rem));
+    //breakpoints
     --breakpoint-xs: 0;
     --breakpoint-sm: 576px;
     --breakpoint-md: 768px;
     --breakpoint-lg: 992px;
     --breakpoint-xl: 1200px;
     --border-radius: 6px;
+    //icons
     --checkmark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(0,0,0)' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
     --chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgba(65, 84, 98, 0.999)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
 }
@@ -51,6 +59,8 @@
         --hover-color: var(--gray-700);
         --section-bg-color: var(--gray-800);
         --table-alt-color: var(--gray-700);
+        --button-bg-color: var(--gray-800);
+        --button-hover-color: var(--gray-700);
         --chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgba(248,249,250, 0.999)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
     }
 }

@@ -206,3 +206,17 @@ select {
     background-repeat: no-repeat;
     background-position: right calc(var(--spacing) * 0.5) center;
 }
+
+button,
+*[role='button'] {
+    padding: calc(var(--spacing) * 0.5) var(--spacing);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    color: var(--font-color);
+    background-color: var(--button-bg-color);
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--button-hover-color);
+    }
+}
