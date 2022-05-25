@@ -14,10 +14,11 @@
     --gray-700: #495057;
     --gray-800: #343a40;
     --gray-900: #212529;
+    --theme: #ff8e3c;
+    --font-color: var(--gray-900);
     --bg-color: var(--gray-100);
     --header-bg-color: var(--gray-300);
     --section-bg-color: var(--white);
-    --font-color: var(--gray-900);
     --border-color: var(--gray-500);
     --hover-color: var(--gray-400);
     --table-alt-color: var(--gray-200);
@@ -53,9 +54,9 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
+        --font-color: var(--gray-100);
         --bg-color: var(--gray-900);
         --header-bg-color: var(--gray-800);
-        --font-color: var(--gray-100);
         --hover-color: var(--gray-700);
         --section-bg-color: var(--gray-800);
         --table-alt-color: var(--gray-700);

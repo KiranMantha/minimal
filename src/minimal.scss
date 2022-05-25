@@ -7,17 +7,21 @@
 
 html {
     font-family: var(--font-family);
+    font-size: var(--html-font-size);
     scroll-behavior: smooth;
+}
+
+body,
+header {
+    display: grid;
+    grid-template-columns: 1fr min(75rem, 90%) 1fr; //max-width: 1200px => 75rem
 }
 
 body {
     margin: 0;
     padding: 0;
-    font-size: var(--html-font-size);
     color: var(--font-color);
     background-color: var(--bg-color);
-    display: grid;
-    grid-template-columns: 1fr min(75rem, 90%) 1fr;
 
     &.container-fluid {
         grid-template-columns: 1fr 90% 1fr;
@@ -30,8 +34,6 @@ body {
 
 header {
     grid-column: 1/-1;
-    display: grid;
-    grid-template-columns: 1fr min(75rem, 90%) 1fr;
     background-color: var(--header-bg-color);
 
     nav {
@@ -91,7 +93,6 @@ section {
 table {
     border-collapse: separate;
     border-spacing: 0;
-    table-layout: fixed;
     width: 100%;
 
     thead {
@@ -117,9 +118,15 @@ table {
     }
 
     tbody {
-        tr:last-child {
-            td {
-                border-bottom: none;
+        tr {
+            &:last-child {
+                td {
+                    border-bottom: none;
+                }
+            }
+
+            &:hover {
+                background-color: var(--table-alt-color);
             }
         }
     }
@@ -131,16 +138,10 @@ table {
             }
         }
     }
+}
 
-    &[role='grid'] {
-        tbody {
-            tr:nth-child(odd) {
-                td {
-                    background-color: var(--table-alt-color);
-                }
-            }
-        }
-    }
+.table-responsive {
+    overflow: auto;
 }
 
 .table-sticky {
@@ -166,19 +167,11 @@ table {
 
 section {
     .table-sticky {
+        table {
 
-        table th,
-        tfoot td {
-            background-color: var(--section-bg-color);
-        }
-    }
-
-    table[role='grid'] {
-        tbody {
-            tr:nth-child(odd) {
-                td {
-                    background-color: var(--table-alt-color);
-                }
+            thead th,
+            tfoot td {
+                background-color: var(--section-bg-color);
             }
         }
     }
@@ -189,19 +182,25 @@ footer {
 }
 
 input:not([type='checkbox']):not([type='radio']),
-select:not([multiple]) {
-    width: 100%;
+select,
+button,
+*[role='button'] {
+    padding: calc(var(--spacing) * 0.5) var(--spacing);
     border-radius: var(--border-radius);
     border: 1px solid var(--border-color);
-    padding: calc(var(--spacing) * 0.5) var(--spacing);
-    background-color: var(--bg-color);
-    margin-bottom: var(--spacing);
+    font-size: inherit;
     color: var(--font-color);
     line-height: 1.5;
+}
+
+input:not([type='checkbox']):not([type='radio']),
+select {
+    width: 100%;
+    background-color: var(--bg-color);
     appearance: none;
 }
 
-select {
+select:not([multiple]) {
     background-image: var(--chevron);
     background-repeat: no-repeat;
     background-position: right calc(var(--spacing) * 0.5) center;
@@ -209,14 +208,12 @@ select {
 
 button,
 *[role='button'] {
-    padding: calc(var(--spacing) * 0.5) var(--spacing);
-    border-radius: var(--border-radius);
-    border: 1px solid var(--border-color);
-    color: var(--font-color);
     background-color: var(--button-bg-color);
     cursor: pointer;
 
-    &:hover {
-        background-color: var(--button-hover-color);
+    &[type='submit'] {
+        background-color: var(--theme);
+        border: 0;
+        color: var(--gray-900);
     }
 }
