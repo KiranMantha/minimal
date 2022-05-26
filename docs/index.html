@@ -31,36 +31,74 @@
         <h4>Sample header h4</h4>
         <h5>Sample header h5</h5>
         <h6>Sample header h6</h6>
+        <div>
+            <dialog id="favDialog">
+                <form method="dialog">
+                    <p>
+                        <label>Favorite animal:
+                            <select>
+                                <option value="default">Choose...</option>
+                                <option>Brine shrimp</option>
+                                <option>Red panda</option>
+                                <option>Spider monkey</option>
+                            </select>
+                        </label>
+                    </p>
+                    <div>
+                        <button value="cancel">Cancel</button>
+                        <button id="confirmBtn" type="submit">Confirm</button>
+                    </div>
+                </form>
+            </dialog>
+            <p>
+                <button id="updateDetails">Open dialog</button>
+            </p>
+            <output></output>
+        </div>
         <section>
             <p>Form Elements</p>
-            <label for="">Input</label>
-            <input type="text" />
-            <label for="">dropdown</label>
-            <select>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-            </select>
-            multi select
-            <select multiple size="4">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-            </select>
-            <div>
-                <label for="">
-                    <input type="checkbox" />
+            <p>
+                <label for="">Input</label>
+                <input type="text" />
+            </p>
+            <p>
+                <label for="">Date</label>
+                <input type="date" />
+            </p>
+            <p>
+                <label for="">Time</label>
+                <input type="time" />
+            </p>
+            <p>
+                <label for="">Range</label>
+                <input type="range" />
+            </p>
+            <p>
+                <label for="">dropdown</label>
+                <select>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </p>
+            <p>
+                <label>multi select</label>
+                <select multiple size="3">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </p>
+            <p>
+                <label for="1">
+                    <input type="checkbox" id="1" />
                     checkbox</label>
-            </div>
-            <div>
-                <label for="">
-                    <input type="radio" />
+            </p>
+            <p>
+                <label for="2">
+                    <input type="radio" id="2" />
                     radio</label>
-            </div>
-            <label for="">Buttons</label>
+            </p>
             <button>normal button</button>
             <button type="submit">submit button</button>
         </section>
@@ -69,6 +107,67 @@
             <p>for this wrap the table with div having class table-responsive</p>
             <div class="table-responsive">
                 <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Heading</th>
+                            <th>Heading</th>
+                            <th>Heading</th>
+                            <th>Heading</th>
+                            <th>Heading</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Cell</td>
+                            <td>Cell</td>
+                            <td>Cell</td>
+                            <td>Cell</td>
+                            <td>Cell</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Cell</td>
+                            <td>Cell</td>
+                            <td>Cell</td>
+                            <td>Cell</td>
+                            <td>Cell</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Cell</td>
+                            <td>Cell</td>
+                            <td>Cell</td>
+                            <td>Cell</td>
+                            <td>Cell</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Cell</td>
+                            <td>Cell</td>
+                            <td>Cell</td>
+                            <td>Cell</td>
+                            <td>Cell</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>#</td>
+                            <td scope="col">Total</td>
+                            <td scope="col">Total</td>
+                            <td scope="col">Total</td>
+                            <td scope="col">Total</td>
+                            <td scope="col">Total</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+        <section>
+            <p>bordered table</p>
+            <div class="table-responsive">
+                <table class="table-bordered">
                     <thead>
                         <tr>
                             <th>#</th>
