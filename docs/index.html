@@ -22,16 +22,16 @@
                     <a>menu 3</a>
                 </li>
                 <li>
-                    <details role='listbox'>
+                    <details role="listbox">
                         <summary>dropdown</summary>
-                        <ul>
-                            <li>
+                        <ul role="menu">
+                            <li role="menuitem">
                                 <a>Sub menu 1</a>
                             </li>
-                            <li>
+                            <li role="menuitem">
                                 <a>Sub menu 2</a>
                             </li>
-                            <li>
+                            <li role="menuitem">
                                 <a>Sub menu 3</a>
                             </li>
                         </ul>
@@ -401,6 +401,18 @@
                     favDialog.returnValue + ' button clicked - ' + new Date().toString();
             });
         });
+
+        //add single select dropdown functionality
+        []
+            .concat(
+                ...document.querySelectorAll('[role="menuitem"]'),
+                ...document.querySelectorAll('[role="menuitemradio"]')
+            )
+            .forEach((item) => {
+                item.addEventListener('click', (e) => {
+                    e.target.closest('[role="listbox"]').removeAttribute('open');
+                });
+            });
     </script>
 </body>
 
