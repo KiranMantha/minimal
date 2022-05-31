@@ -21,6 +21,22 @@
                 <li>
                     <a>menu 3</a>
                 </li>
+                <li>
+                    <details role='listbox'>
+                        <summary>dropdown</summary>
+                        <ul>
+                            <li>
+                                <a>Sub menu 1</a>
+                            </li>
+                            <li>
+                                <a>Sub menu 2</a>
+                            </li>
+                            <li>
+                                <a>Sub menu 3</a>
+                            </li>
+                        </ul>
+                    </details>
+                </li>
             </ul>
         </nav>
     </header>
@@ -55,6 +71,7 @@
             </p>
             <output></output>
         </div>
+        <article>I'm inside an article tag</article>
         <section>
             <p>Form Elements</p>
             <p>
@@ -348,43 +365,6 @@
             </div>
         </section>
     </main>
-    <script type="text/javascript">
-        window.addEventListener('DOMContentLoaded', (event) => {
-            const updateButton = document.getElementById('updateDetails');
-            const favDialog = document.getElementById('favDialog');
-            const outputBox = document.querySelector('output');
-            const selectEl = favDialog.querySelector('select');
-            const confirmBtn = favDialog.querySelector('#confirmBtn');
-
-            // If a browser doesn't support the dialog, then hide the
-            // dialog contents by default.
-            if (typeof favDialog.showModal !== 'function') {
-                favDialog.hidden = true;
-                /* a fallback script to allow this dialog/form to function
-                        for legacy browsers that do not support <dialog>
-                        could be provided here.
-                      */
-            }
-            // "Update details" button opens the <dialog> modally
-            updateButton.addEventListener('click', function () {
-                if (typeof favDialog.showModal === 'function') {
-                    favDialog.showModal();
-                } else {
-                    outputBox.value =
-                        'Sorry, the <dialog> API is not supported by this browser.';
-                }
-            });
-            // "Favorite animal" input sets the value of the submit button
-            selectEl.addEventListener('change', function (e) {
-                confirmBtn.value = selectEl.value;
-            });
-            // "Confirm" button of form triggers "close" on dialog because of [method="dialog"]
-            favDialog.addEventListener('close', function () {
-                outputBox.value =
-                    favDialog.returnValue + ' button clicked - ' + new Date().toString();
-            });
-        });
-    </script>
 </body>
 
 </html>
