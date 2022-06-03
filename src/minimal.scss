@@ -61,6 +61,7 @@ header {
 
             li {
                 a {
+                    display: block;
                     text-decoration: none;
                     padding: calc(var(--spacing) * 0.5) var(--spacing);
                     border-radius: var(--border-radius);
@@ -71,6 +72,10 @@ header {
                     }
                 }
             }
+        }
+
+        details {
+            margin-bottom: 0;
         }
     }
 
@@ -369,6 +374,32 @@ dialog {
     }
 }
 
+details {
+    margin-bottom: calc(var(--spacing) * 2);
+
+    &>summary {
+        cursor: pointer;
+        padding: calc(var(--spacing) * 0.5) var(--spacing);
+        line-height: 1.5;
+        color: inherit;
+        border: 1px solid var(--border-color);
+        border-radius: var(--border-radius);
+    }
+
+    &[open]>summary {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+
+        &+* {
+            border: 1px solid var(--border-color);
+            border-top: none;
+            border-bottom-left-radius: var(--border-radius);
+            border-bottom-right-radius: var(--border-radius);
+            padding: calc(var(--spacing) * 0.5) var(--spacing);
+        }
+    }
+}
+
 details[role='listbox'] {
     position: relative;
 
@@ -384,12 +415,6 @@ details[role='listbox'] {
     &>summary {
         list-style: none;
         position: relative;
-        cursor: pointer;
-        padding: calc(var(--spacing) * 0.5) var(--spacing);
-        line-height: 1.5;
-        color: inherit;
-        border: 1px solid var(--border-color);
-        border-radius: var(--border-radius);
 
         &::-webkit-details-marker {
             display: none;
@@ -410,9 +435,6 @@ details[role='listbox'] {
     }
 
     &[open]>summary {
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-
         &::before {
             position: fixed;
             top: 0;
@@ -441,10 +463,6 @@ details[role='listbox'] {
         top: auto;
         left: 0px;
         right: 0px;
-        border: 1px solid var(--border-color);
-        border-top: none;
-        border-bottom-left-radius: var(--border-radius);
-        border-bottom-right-radius: var(--border-radius);
         background-color: var(--body-background-color);
         z-index: 2;
         list-style: none;
