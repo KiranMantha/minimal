@@ -83,16 +83,37 @@
                 <input type="text" />
             </p>
             <p>
+                <label for="avatar">File upload</label>
+                <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" />
+            </p>
+            <p>
                 <label for="">Date</label>
                 <input type="date" />
+            </p>
+            <p>
+                <label for="">Month</label>
+                <input type="month" />
+            </p>
+            <p>
+                <label for="">Week</label>
+                <input type="week" />
             </p>
             <p>
                 <label for="">Time</label>
                 <input type="time" />
             </p>
             <p>
+                <label for="meeting-time">Datetime</label>
+                <input type="datetime-local" id="meeting-time" name="meeting-time" value="2018-06-12T19:30"
+                    min="2018-06-07T00:00" max="2018-06-14T00:00" />
+            </p>
+            <p>
                 <label for="">Range</label>
                 <input type="range" />
+            </p>
+            <p>
+                <label for="phone">Enter a phone number:</label>
+                <input type="tel" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
             </p>
             <p>
                 <label for="">dropdown</label>
@@ -253,8 +274,8 @@
         </section>
         <section>
             table with sticky header and footer
-            <div class="table-sticky" style="max-height: 400px">
-                <table>
+            <div class="table-responsive" style="max-height: 400px">
+                <table class="table-sticky">
                     <thead>
                         <tr>
                             <th>#</th>
