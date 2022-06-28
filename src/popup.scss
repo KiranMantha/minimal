@@ -1,0 +1,33 @@
+details[aria-haspopup='true'] {
+    display: inline-block;
+    position: relative;
+
+    summary {
+        cursor: pointer;
+    }
+
+    &[open] summary {
+        &::before {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            display: block;
+            cursor: default;
+            content: ' ';
+            background-color: transparent;
+        }
+    }
+
+    summary+div {
+        position: absolute;
+        margin: 4px auto;
+        padding: var(--spacing);
+        z-index: 2;
+        background-color: var(--primary);
+        border: 1px solid var(--border-color);
+        border-radius: 4px;
+    }
+}

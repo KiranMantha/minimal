@@ -1,0 +1,27 @@
+@keyframes dialog-open {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+dialog {
+    box-shadow: var(--box-shadow);
+    background-color: var(--background-color);
+    border-radius: var(--border-radius);
+    border: 0;
+    padding: var(--spacing);
+
+    &[open] {
+        animation: dialog-open 0.45s ease normal;
+    }
+
+    &::backdrop {
+        background-color: var(--backdrop-color);
+    }
+}
