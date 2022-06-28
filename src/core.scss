@@ -238,35 +238,6 @@ input {
         vertical-align: middle;
     }
 
-    &[type='checkbox'][role='switch'] {
-        appearance: none;
-        position: relative;
-        width: calc(var(--spacing) * 2.1);
-        border: 2px solid var(--border-color);
-        border-radius: calc(var(--spacing) * 2);
-        background-color: var(--body-background-color);
-
-        &:checked {
-            border-color: var(--theme);
-        }
-
-        &::before {
-            content: '';
-            position: absolute;
-            width: 1rem;
-            height: 1rem;
-            border-radius: 50%;
-            background-color: var(--border-color);
-            margin-left: 0;
-            transition: margin 0.1s ease-in-out;
-        }
-
-        &:checked::before {
-            margin-left: calc(var(--spacing) * 0.85);
-            background-color: var(--theme);
-        }
-    }
-
     &:is([type='date'], [type='datetime-local'], [type='month'], [type='week'], [type='time']) {
         background-size: var(--spacing) auto;
 

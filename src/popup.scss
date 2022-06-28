@@ -4,6 +4,7 @@ details[aria-haspopup='true'] {
 
     summary {
         cursor: pointer;
+        list-style: none;
     }
 
     &[open] summary {
