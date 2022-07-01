@@ -1,5 +1,4 @@
-details[aria-haspopup='true'],
-details[role='menu'] {
+details[aria-haspopup='true'] {
     display: inline-block;
     position: relative;
 
@@ -26,8 +25,7 @@ details[role='menu'] {
         }
     }
 
-    summary+div,
-    summary+ul[role='menu'] {
+    summary+div {
         position: absolute;
         margin: 4px auto;
         padding: var(--spacing);
@@ -35,19 +33,5 @@ details[role='menu'] {
         background-color: var(--body-background-color);
         border: 1px solid var(--border-color);
         border-radius: var(--border-radius);
-    }
-
-    summary+ul[role='menu'] {
-        padding: 0;
-        list-style: none;
-
-        &>li[role='menuitem'] {
-            padding: 0;
-            box-sizing: border-box;
-
-            a {
-                display: block;
-            }
-        }
     }
 }
