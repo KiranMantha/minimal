@@ -62,7 +62,7 @@ header {
 
             li {
                 a {
-                    display: block;
+                    display: flex;
                     text-decoration: none;
                     padding: calc(var(--spacing) * 0.5) var(--spacing);
                     border-radius: var(--border-radius);
