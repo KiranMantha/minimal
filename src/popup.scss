@@ -1,37 +1,36 @@
 details[aria-haspopup='true'] {
-    display: inline-block;
-    position: relative;
+  display: inline-block;
+  position: relative;
 
+  summary {
+    cursor: pointer;
+    list-style: none;
+  }
+
+  &[open] {
     summary {
-        cursor: pointer;
-        list-style: none;
-    }
+      &:before {
+        background-color: transparent;
+        bottom: 0;
+        content: ' ';
+        cursor: default;
+        display: block;
+        left: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 1;
+      }
 
-    &[open] summary {
-        border-bottom-left-radius: var(--border-radius);
-        border-bottom-right-radius: var(--border-radius);
-
-        &::before {
-            position: fixed;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            z-index: 1;
-            display: block;
-            cursor: default;
-            content: ' ';
-            background-color: transparent;
-        }
-    }
-
-    summary+div {
-        position: absolute;
+      & + div {
+        background-color: var(--primary);
+        border: 1px solid var(--border-color);
+        border-radius: 4px;
         margin: 4px auto;
         padding: var(--spacing);
+        position: absolute;
         z-index: 2;
-        background-color: var(--body-background-color);
-        border: 1px solid var(--border-color);
-        border-radius: var(--border-radius);
+      }
     }
+  }
 }
