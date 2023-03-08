@@ -1,0 +1,89 @@
+//color reference: https://getbootstrap.com/docs/5.2/customize/color/; https://www.figma.com/community/file/1029506782158027808/Ultimate-color-palette-system-%E2%80%93-Untitled-UI
+//box-shadow examples: https://getcssscan.com/css-box-shadow-examples
+//table: https://www.w3schools.com/howto/howto_js_sort_table.asp
+
+//theme color samples
+//#E2703A
+//#57acdc
+//#276BB0
+
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --gray-25: #fcfcfd;
+  --gray-50: #f9fafb;
+  --gray-100: #f8f9fa;
+  --gray-150: #e9ecef80;
+  --gray-200: #e9ecef;
+  --gray-300: #dee2e6;
+  --gray-400: #ced4da;
+  --gray-500: #adb5bd;
+  --gray-600: #6c757d;
+  --gray-700: #495057;
+  --gray-800: #343a40;
+  --gray-900: #212529;
+  --theme: #2684ff;
+  --theme75: #4c9aff;
+  --body-background-color: var(--white); /*var(--gray-50);*/
+  --background-color: var(--white);
+  --font-color: var(--gray-900);
+  --hover-color: var(--gray-150);
+  --button-hover-color: var(--theme75);
+  --border-color: var(--gray-400);
+  --range-background-color: var(--gray-400);
+  --th-background-color: var(--gray-200);
+  --box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+  --box-shadow-inverted: rgba(9, 30, 66, 0.13) 0px 1px 1px, rgba(9, 30, 66, 0.25) 0px 0px 1px 1px;
+  --button-background-color: var(--gray-25); /*hsla(0, 100%, 100%, 0.07);*/
+  --switch-color: var(--gray-500);
+  --font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --spacing: 1em;
+  --base: 16;
+  --html-font-size: calc((var(--base) / 16) * 100%);
+  --font-8: calc(8 / var(--base) * 1rem);
+  --font-16: calc(16 / var(--base) * 1rem);
+  --font-24: calc(24 / var(--base) * 1rem);
+  --font-32: calc(32 / var(--base) * 1rem);
+  --font-40: calc(40 / var(--base) * 1rem);
+  --font-48: calc(48 / var(--base) * 1rem);
+  --font-64: calc(64 / var(--base) * 1rem);
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --border-radius: 4px;
+  --grid-gutter: 2rem;
+  --icon-checkmark: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' stroke='rgba(65, 84, 98, 0.999)' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E");
+  --icon-chevron: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' stroke='rgba(65, 84, 98, 0.999)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  --icon-date: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' stroke='rgba(65, 84, 98, 0.999)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'/%3E%3Cpath d='M16 2v4M8 2v4M3 10h18'/%3E%3C/svg%3E");
+  --icon-time: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' stroke='rgba(65, 84, 98, 0.999)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M12 6v6l4 2'/%3E%3C/svg%3E");
+  --icon-close: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgba(65, 84, 98, 0.999)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='18' y1='6' x2='6' y2='18'%3E%3C/line%3E%3Cline x1='6' y1='6' x2='18' y2='18'%3E%3C/line%3E%3C/svg%3E");
+}
+::-webkit-backdrop {
+  --backdrop-color: rgb(0 0 0/45%);
+}
+::backdrop {
+  --backdrop-color: rgb(0 0 0/45%);
+}
+/* @media (prefers-color-scheme: dark) { */
+[data-theme='dark'] {
+  /* --theme: #276bb0; */
+  --body-background-color: var(--gray-900); /*#1A202C*/
+  --background-color: var(--gray-800); /*#2D3748*/
+  --button-background-color: var(--gray-800);
+  --font-color: var(--gray-300);
+  --hover-color: var(--gray-700);
+  --border-color: var(--gray-600);
+  --range-background-color: var(--gray-900);
+  --th-background-color: var(--gray-700);
+  --box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3), 0 2px 6px 2px rgba(0, 0, 0, 0.15);
+  --box-shadow-inverted: 0 1px 2px 0 rgba(0, 0, 0, 0.15), 0 2px 6px 2px rgba(0, 0, 0, 0.3);
+  --switch-color: var(--gray-600);
+  --icon-checkmark: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' stroke='rgba(206, 212, 218, 0.999)' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E");
+  --icon-chevron: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' stroke='rgba(206, 212, 218, 0.999)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  --icon-date: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' stroke='rgba(206, 212, 218, 0.999)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'/%3E%3Cpath d='M16 2v4M8 2v4M3 10h18'/%3E%3C/svg%3E");
+  --icon-time: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' stroke='rgba(206, 212, 218, 0.999)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M12 6v6l4 2'/%3E%3C/svg%3E");
+  --icon-close: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgba(206, 212, 218, 0.999)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='18' y1='6' x2='6' y2='18'%3E%3C/line%3E%3Cline x1='6' y1='6' x2='18' y2='18'%3E%3C/line%3E%3C/svg%3E");
+}

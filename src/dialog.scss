@@ -1,27 +1,31 @@
 @keyframes dialog-open {
-    from {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0%);
-        opacity: 1;
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 dialog {
-    box-shadow: var(--box-shadow);
-    background-color: var(--background-color);
-    border-radius: var(--border-radius);
-    border: 0;
-    padding: var(--spacing);
+  box-shadow: var(--box-shadow);
+  background-color: var(--background-color);
+  border-radius: var(--border-radius);
+  border: 0;
+  padding: var(--spacing);
 
-    &[open] {
-        animation: dialog-open 0.45s ease normal;
-    }
+  &::-webkit-backdrop {
+    background-color: var(--backdrop-color);
+  }
 
-    &::backdrop {
-        background-color: var(--backdrop-color);
-    }
+  &::backdrop {
+    background-color: var(--backdrop-color);
+  }
+
+  &[open] {
+    -webkit-animation: dialog-open 0.45s ease normal;
+    animation: dialog-open 0.45s ease normal;
+  }
 }
