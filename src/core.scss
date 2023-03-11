@@ -48,7 +48,6 @@ header {
     display: flex;
     grid-column: 2;
     justify-content: space-between;
-    overflow: auto;
 
     ul {
       display: flex;
@@ -198,6 +197,8 @@ input,
 textarea,
 select,
 button,
+[type='checkbox'],
+[type='radio'],
 *[role='button'] {
   font-size: inherit;
   line-height: 1em;
