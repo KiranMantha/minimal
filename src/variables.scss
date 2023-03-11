@@ -39,15 +39,15 @@
   --font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
     Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   --spacing: 1em;
-  --base: 16;
-  --html-font-size: calc((var(--base) / 16) * 100%);
-  --font-8: calc(8 / var(--base) * 1rem);
-  --font-16: calc(16 / var(--base) * 1rem);
-  --font-24: calc(24 / var(--base) * 1rem);
-  --font-32: calc(32 / var(--base) * 1rem);
-  --font-40: calc(40 / var(--base) * 1rem);
-  --font-48: calc(48 / var(--base) * 1rem);
-  --font-64: calc(64 / var(--base) * 1rem);
+  --base: 14;
+  --html-font-size: calc((var(--base) / 14) * 100%);
+  --font-8: calc(8 / var(--base) * 1em);
+  --font-16: calc(16 / var(--base) * 1em);
+  --font-24: calc(24 / var(--base) * 1em);
+  --font-32: calc(32 / var(--base) * 1em);
+  --font-40: calc(40 / var(--base) * 1em);
+  --font-48: calc(48 / var(--base) * 1em);
+  --font-64: calc(64 / var(--base) * 1em);
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
