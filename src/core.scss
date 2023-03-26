@@ -61,13 +61,13 @@ header {
       }
 
       li a {
+        cursor: pointer;
         display: block;
         text-decoration: none;
         padding: calc(var(--spacing) * 0.5) var(--spacing);
         border-radius: var(--border-radius);
 
         &:hover {
-          cursor: pointer;
           background-color: var(--hover-color);
         }
       }
@@ -137,6 +137,7 @@ output {
 }
 
 table {
+  table-layout: fixed;
   border-collapse: separate;
   border-spacing: 0;
   width: 100%;
@@ -197,12 +198,17 @@ input,
 textarea,
 select,
 button,
-[type='checkbox'],
-[type='radio'],
 *[role='button'] {
   font-size: inherit;
   line-height: 1em;
   padding: calc(var(--spacing) * 0.5) var(--spacing);
+
+  &.disabled,
+  &:disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    background: var(--disabled);
+  }
 }
 
 input,
@@ -293,6 +299,7 @@ select:not([multiple]) {
 
 button,
 *[role='button'] {
+  display: inline-block;
   background-color: var(--button-background-color);
   cursor: pointer;
   border-color: transparent;
@@ -312,6 +319,10 @@ button,
       background-color: var(--theme75);
       border-color: var(--theme75);
     }
+  }
+
+  & + & {
+    margin-left: var(--spacing);
   }
 }
 
@@ -338,4 +349,9 @@ details {
       padding: calc(var(--spacing) * 0.5) var(--spacing);
     }
   }
+}
+*[role='tag'] {
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 1px 4px;
 }
