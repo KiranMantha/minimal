@@ -43,6 +43,9 @@
   --base: 14;
   --html-font-size: calc((var(--base) / 14) * 100%);
   --font-8: calc(8 / var(--base) * 1em);
+  --font-10: calc(10 / var(--base) * 1em);
+  --font-12: calc(12 / var(--base) * 1em);
+  --font-14: calc(14 / var(--base) * 1em);
   --font-16: calc(16 / var(--base) * 1em);
   --font-24: calc(24 / var(--base) * 1em);
   --font-32: calc(32 / var(--base) * 1em);
