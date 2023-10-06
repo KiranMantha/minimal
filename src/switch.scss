@@ -7,9 +7,9 @@ input[type='checkbox'][role='switch'] {
   border-radius: calc(var(--spacing) * 2);
   cursor: pointer;
   position: relative;
-  width: calc(var(--spacing) * 2.5);
-  height: calc(var(--spacing) * 1.25);
-  line-height: calc(var(--spacing) * 1.25);
+  width: calc(var(--spacing) * 2.2);
+  height: calc(var(--spacing) * 1.35);
+  line-height: calc(var(--spacing) * 1.35);
 
   &:before {
     content: '';
@@ -31,6 +31,10 @@ input[type='checkbox'][role='switch'] {
   }
 
   &:checked:before {
-    margin-left: calc(var(--spacing) * 1.1);
+    margin-left: calc(var(--spacing) * 0.835);
+  }
+
+  &:hover {
+    box-shadow: none;
   }
 }
