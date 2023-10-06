@@ -40,8 +40,12 @@ body {
   background-color: var(--body-background-color);
 }
 
+input {
+  line-height: 0;
+}
+
 header {
-  background-color: var(--background-color);
+  background-color: var(--header-background-color);
   box-shadow: var(--box-shadow);
 
   nav {
@@ -116,82 +120,11 @@ section {
   border-color: transparent;
   background-color: var(--background-color);
   box-shadow: var(--box-shadow);
-
-  .table-sticky {
-    table {
-      tfoot td,
-      thead th {
-        background-color: var(--background-color);
-      }
-    }
-  }
 }
 
 code,
 output {
   font-family: monospace;
-}
-
-.table-responsive {
-  overflow: auto;
-}
-
-table {
-  table-layout: fixed;
-  border-collapse: separate;
-  border-spacing: 0;
-  width: 100%;
-  text-align: unset;
-
-  &.table-sticky {
-    thead th,
-    tfoot td {
-      position: -webkit-sticky;
-      position: sticky;
-      z-index: 2;
-    }
-
-    thead th {
-      top: 0;
-    }
-    tfoot td {
-      background-color: var(--background-color);
-      bottom: 0;
-    }
-  }
-
-  &.table-bordered {
-    border-left: 1px solid var(--border-color);
-
-    tr td,
-    tr th,
-    *::part(table-cell) {
-      border-right: 1px solid var(--border-color);
-    }
-  }
-
-  &.table-hover {
-    tr:hover,
-    *::part(table-row):hover {
-      background-color: var(--hover-color);
-    }
-  }
-}
-
-thead tr th {
-  background-color: var(--th-background-color);
-  border-top: 1px solid var(--border-color);
-  font-weight: 700;
-}
-tr td,
-tr th {
-  border-bottom: 1px solid var(--border-color);
-  padding: var(--spacing);
-  text-align: inherit;
-  vertical-align: middle;
-}
-tfoot tr:first-child td {
-  border-top: 1px solid var(--border-color);
 }
 
 input,
@@ -208,6 +141,9 @@ button,
     cursor: not-allowed;
     pointer-events: none;
     background: var(--disabled);
+  }
+  &:hover {
+    box-shadow: var(--button-hover-box-shadow);
   }
 }
 
@@ -302,11 +238,12 @@ button,
   display: inline-block;
   background-color: var(--button-background-color);
   cursor: pointer;
-  border-color: transparent;
-  box-shadow: var(--box-shadow);
+  border-color: var(--button-border-color);
+  box-shadow: var(--button-box-shadow);
 
   &:hover {
-    background-color: var(--hover-color);
+    background-color: var(--button-hover-color);
+    box-shadow: var(--button-hover-box-shadow);
   }
 
   &[type='submit'] {
@@ -353,7 +290,5 @@ details {
 *[role='tag'] {
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
-  padding: 2px 5px;
-  font-size: 12px;
-  line-height: 16px;
+  padding: 1px 4px;
 }

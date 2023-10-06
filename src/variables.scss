@@ -21,14 +21,17 @@
   --gray-600: #6c757d;
   --gray-700: #495057;
   --gray-800: #343a40;
+  --gray-850: #24232a;
   --gray-900: #212529;
-  --theme: #2684ff;
+  --gray-950: #1f1e24;
+  // --theme: #2684ff;
+  --theme: #3d82f7;
   --theme75: #4c9aff;
   --body-background-color: var(--white); /*var(--gray-50);*/
   --background-color: var(--white);
+  --header-background-color: var(--white);
   --font-color: var(--gray-900);
   --hover-color: var(--gray-150);
-  --button-hover-color: var(--theme75);
   --border-color: var(--gray-400);
   --disabled: var(--gray-200);
   --range-background-color: var(--gray-400);
@@ -36,6 +39,10 @@
   --box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
   --box-shadow-inverted: rgba(9, 30, 66, 0.13) 0px 1px 1px, rgba(9, 30, 66, 0.25) 0px 0px 1px 1px;
   --button-background-color: var(--gray-25); /*hsla(0, 100%, 100%, 0.07);*/
+  --button-border-color: transparent;
+  --button-hover-color: var(--hover-color);
+  --button-box-shadow: var(--box-shadow);
+  --button-hover-box-shadow: var(--box-shadow);
   --switch-color: var(--gray-500);
   --font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
     Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
@@ -43,9 +50,6 @@
   --base: 14;
   --html-font-size: calc((var(--base) / 14) * 100%);
   --font-8: calc(8 / var(--base) * 1em);
-  --font-10: calc(10 / var(--base) * 1em);
-  --font-12: calc(12 / var(--base) * 1em);
-  --font-14: calc(14 / var(--base) * 1em);
   --font-16: calc(16 / var(--base) * 1em);
   --font-24: calc(24 / var(--base) * 1em);
   --font-32: calc(32 / var(--base) * 1em);
@@ -73,15 +77,20 @@
 }
 /* @media (prefers-color-scheme: dark) { */
 [data-theme='dark'] {
-  /* --theme: #276bb0; */
-  --body-background-color: var(--gray-900); /*#1A202C*/
-  --background-color: var(--gray-800); /*#2D3748*/
-  --button-background-color: var(--gray-800);
+  /* --theme: #276bb0; #3d82f7*/
+  --body-background-color: var(--gray-950); /*#1A202C #181818*/
+  --background-color: var(--gray-900); /*#2D3748*/
+  --header-background-color: var(--gray-800); /*rgb(33, 33, 36)*/
+  --button-background-color: rgb(33, 33, 36); //var(--gray-800);
+  --button-border-color: var(--border-color);
+  --button-box-shadow: none;
+  --button-hover-color: rgb(33, 33, 36);
+  --button-hover-box-shadow: inset 0 0 0 1px var(--button-border-color), 0 1px 1px 0 rgba(0, 0, 0, 0.08); //var(--theme75);
   --font-color: var(--gray-300);
-  --hover-color: var(--gray-700);
-  --border-color: var(--gray-600);
+  --hover-color: var(--gray-800);
+  --border-color: var(--gray-700);
   --range-background-color: var(--gray-900);
-  --th-background-color: var(--gray-700);
+  --th-background-color: var(--gray-800);
   --box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3), 0 2px 6px 2px rgba(0, 0, 0, 0.15);
   --box-shadow-inverted: 0 1px 2px 0 rgba(0, 0, 0, 0.15), 0 2px 6px 2px rgba(0, 0, 0, 0.3);
   --disabled: var(--gray-600);
